@@ -1,0 +1,36 @@
+@import "./variable.less";
+.body-content{
+    background-color: @weuiBgColorDefault;
+    width: 100%;
+    height: calc(~"100vh - @{fixedHeaderHeight} - @{dialogueInputHeight}");
+    overflow-y: scroll;
+}
+.body-content-without-footer{
+    background-color: @weuiBgColorDefault;
+    width: 100%;
+    height: calc(~"100vh - @{fixedHeaderHeight}");
+    overflow-y: scroll;
+}
+.sc-real-close(@size:auto){
+.sc-close {
+    width: @size;
+    height: @size;
+    opacity: 0.3;
+  }
+  .sc-close:hover {
+    opacity: 1;
+  }
+  .sc-close:before, .sc-close:after {
+    position: absolute;
+    content: ' ';
+    height: @size;
+    width: 2px;
+    background-color: #333;
+  }
+  .sc-close:before {
+    transform: rotate(45deg);
+  }
+  .sc-close:after {
+    transform: rotate(-45deg);
+  }
+}
